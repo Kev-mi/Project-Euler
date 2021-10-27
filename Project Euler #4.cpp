@@ -9,10 +9,11 @@ void palindrome_product(int upper_bound) {
   int largest_palindrome = 0;
     for (int x = 102; x < upper_bound; x++){
         for (int y = 100; y < x; y++){
-            string str_1 = to_string(x*y);
-            string str_2 = to_string(x*y);
-            reverse(str_2.begin(), str_2.end());
-            if (str_1 == str_2){
+            int reversed = 0, placeholder = x*y;
+            while(placeholder > 0){
+                reversed = reversed*10 + placeholder%10;
+                placeholder /= 10;}
+            if (x*y == reversed){
                 if (x*y > largest_palindrome){
                     largest_palindrome = x*y;
                 }
