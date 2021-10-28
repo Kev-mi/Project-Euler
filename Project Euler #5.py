@@ -29,7 +29,6 @@ if __name__ == "__main__":
     start = time.time()
     user_input = 20
     prime_finder(user_input)
-    answer = smallest_multiple(user_input)
-    print(answer)
+    print(smallest_multiple(user_input))
     end = time.time()
     print(end - start)
