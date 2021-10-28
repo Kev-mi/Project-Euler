@@ -17,8 +17,7 @@ def digit_factorials_3digits(x, upper_bound):
 
 def digit_factorials_4digits(x, upper_bound):
     while int(x) < upper_bound:
-        if str(x) == str(int(factorials[int(x[0])]) + int(factorials[int(x[1])]) + int(factorials[int(x[2])]) + int(
-                factorials[int(x[3])])):
+        if str(x) == str(int(factorials[int(x[0])]) + int(factorials[int(x[1])]) + int(factorials[int(x[2])]) + int(factorials[int(x[3])])):
             Digit_Factorials.append(int(x))
             x = str(int(x) + 1)
         else:
