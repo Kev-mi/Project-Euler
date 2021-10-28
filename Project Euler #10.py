@@ -18,6 +18,6 @@ def prime_finder(number):
 if __name__ == "__main__":
     prime_list = [2]
     start = time.time()
-    print(prime_finder(2000000))
+    print(prime_finder(1999999))
     end = time.time()
     print(end - start)
