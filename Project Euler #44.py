@@ -24,7 +24,6 @@ if __name__ == "__main__":
     start = time.time()
     pentagon_numbers = []
     pentagon_number_generator()
-    finder()
-    print(pentagon_numbers)
+    print(finder())
     end = time.time()
     print(end - start)
