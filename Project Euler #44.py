@@ -13,8 +13,6 @@ def finder():
             if x > y:
                 if ((math.sqrt(24*(x+y)+1)+1)/6).is_integer():
                     if ((math.sqrt(24*(x-y)+1)+1)/6).is_integer():
-                        end = time.time()
-                        print(end - start)
                         return abs(x-y)
                     else:
                         break
@@ -22,8 +20,11 @@ def finder():
                 break
 
 
-start = time.time()
-pentagon_numbers = []
-pentagon_number_generator()
-finder()
-print(pentagon_numbers)
+if __name__ == "__main__":
+    start = time.time()
+    pentagon_numbers = []
+    pentagon_number_generator()
+    finder()
+    print(pentagon_numbers)
+    end = time.time()
+    print(end - start)
