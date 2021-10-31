@@ -7,8 +7,8 @@ amicable = []
 
 def divisors_generator(upper_bound):
     for x in range(1, upper_bound):
-        divisor_list = []
-        for y in range(1, int(math.sqrt(x) + 1)):
+        divisor_list = [x,1]
+        for y in range(2, int(math.sqrt(x) + 1)):
             if x % y == 0:
                 divisor_list.append(int(x / y))
                 divisor_list.append(y)
