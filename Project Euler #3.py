@@ -4,6 +4,7 @@ import math
 def time_checker():
     end = time.time()
     print(end - start)
+    exit()
 
 def prime_checker(number):
     factor_list = []
@@ -22,11 +23,9 @@ def prime_checker(number):
         factor_list.append(int(number))
         print("prime factors are ", factor_list)
         time_checker()
-        exit()
     if number == 1:
         print("prime factors are ", factor_list)
         time_checker()
-        exit()
     return factor_list, number
 
 
@@ -38,7 +37,6 @@ def factor_finder(prime_list, factor_list, number):
                 factor_list.append(x)
     print("prime factors are ", factor_list)
     time_checker()
-    return factor_list
 
 
 def prime_finder(number):
@@ -61,4 +59,4 @@ if __name__ == "__main__":
     number = 600851475143
     factor_list, number = prime_checker(number)
     prime_list = prime_finder(math.floor(math.sqrt(number+1)))
-    factor_list = factor_finder(prime_list, factor_list, number)
+    factor_finder(prime_list, factor_list, number)
