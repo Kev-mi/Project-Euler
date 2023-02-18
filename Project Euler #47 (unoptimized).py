@@ -60,23 +60,20 @@ def distinct_primes_factors():
         factor_list_3 = []
         factor_list_4 = []
         factor_list, y = prime_checker(y, factor_list)
-        factor_list_2, y_2 = prime_checker(y_2, factor_list_2)
-        factor_list_3, y_3 = prime_checker(y_3, factor_list_3)
-        factor_list_4, y_4 = prime_checker(y_4, factor_list_4)
         factor_list = factor_finder(prime_list, factor_list, y)
-        factor_list_2 = factor_finder(prime_list, factor_list_2, y_2)
-        factor_list_3 = factor_finder(prime_list, factor_list_3, y_3)
-        factor_list_4 = factor_finder(prime_list, factor_list_4, y_4)
-        y = len(set(factor_list))
-        y_2 = len(set(factor_list_2))
-        y_3 = len(set(factor_list_3))
-        y_4 = len(set(factor_list_4))
-        if y == 4:
-            if y_2 == 4:
-                if y_3 == 4:
-                    if y_4 == 4:
+        if len(set(factor_list)) == 4:
+            factor_list_2, y_2 = prime_checker(y_2, factor_list_2)
+            factor_list_2 = factor_finder(prime_list, factor_list_2, y_2)
+            if len(set(factor_list_2)) == 4:
+                factor_list_3, y_3 = prime_checker(y_3, factor_list_3)
+                factor_list_3 = factor_finder(prime_list, factor_list_3, y_3)
+                if len(set(factor_list_3)) == 4:
+                    factor_list_4, y_4 = prime_checker(y_4, factor_list_4)
+                    factor_list_4 = factor_finder(prime_list, factor_list_4, y_4)
+                    if len(set(factor_list_4)) == 4:
                         y = list_product_sum(factor_list)
                         return y, y + 1, y + 2, y + 3
+
 
 
 if __name__ == "__main__":
