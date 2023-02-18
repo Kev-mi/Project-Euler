@@ -53,7 +53,7 @@ def list_product_sum(list):
 def distinct_primes_factors():
     x = 150000
     prime_list = prime_finder(math.floor(math.sqrt(x + 1)))
-    for y in range(3, x, 3):
+    for y in range(3, x, 4):
         y_2, y_3, y_4 = y + 1, y + 2, y + 3
         factor_list = []
         factor_list_2 = []
